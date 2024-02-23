@@ -1,0 +1,18 @@
+class UserSwitchAgent:
+    def __init__(self, current_user):
+        self.current_user = current_user
+
+    def switch_user(self, new_user):
+        print(f"Switching from {self.current_user} to {new_user}.")
+        self.current_user = new_user
+
+    def get_current_user(self):
+        return self.current_user
+
+
+# Example usage
+if __name__ == "__main__":
+    agent = UserSwitchAgent("User1")
+    print("Current user:", agent.get_current_user())
+    agent.switch_user("User2")
+    print("Current user:", agent.get_current_user())
